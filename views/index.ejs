@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+
+<body>
+  <h1>Next 3hr Weather</h1>
+  <div class="card">
+    <p>
+      Location:<%= weatherdata.country  %>,  <%= weatherdata.name  %> 
+      <br>
+      Weather: <%= weatherdata.weather  %> 
+      <br>
+      Timezone: <%= weatherdata.timezone %>
+    </p>
+ 
+  </div>
+  <p class="user">
+    Lon,Lat: 
+    <%= weatherdata.lon  %>, <%= weatherdata.lat  %> 
+  </p>
+  <h4>
+    <form id="myForm" method="post">
+      <label for="LonInput">Lon:</label>
+      <input type="text"  name="Lon">
+  
+      <label for="LatInput">Lat:</label>
+      <input type="text"  name="Lat">
+  
+      <input type="submit" value="submit" formaction="/submit">
+    </form>
+  </h4>
+ 
+
+</body>
+
+</html>
